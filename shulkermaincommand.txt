@@ -1,0 +1,114 @@
+/give @p 
+	purple_shulker_box{
+		display:{
+			Name:
+				'{"text":"Quasar Toolkit","color":"light_purple","italic":false}',
+			Lore:[
+				'{"text":"A project by Anythingbuilder with some concepts from others","color":"purple","italic":false}',
+				'{"text":"Everything you need in one kit.","color":"dark_blue","italic":false}',
+				'{"text":"This label will dissapear when the kit is first","color":"dark_gray","italic":true}',
+				'{"text":"opened, which shows this copy is untouched.","color":"dark_gray","italic":true}',
+			]
+		},
+		HideFlags:63,
+		BlockEntityTag:{
+			Items:[
+				{
+					Slot:0,
+					id:wooden_sword,
+					Count:1,
+					tag:{
+						display:{
+							Name:
+								'{"text":"Instakill Tool","color":"light_purple","italic":false}',
+							Lore:[
+								'{"text":"AMB\'s Custom","color":"blue","italic":false}',
+								'{"text":" "}',
+								'{"text":"When in Main Hand:","color":"gray","italic":false}',
+								'{"text":" ∞ Attack Damage","color":"dark_green","italic":false}',
+								'{"text":" ∞ Attack Speed","color":"dark_green","italic":false}',
+								'{"text":" "}',
+								'{"text":"\\"Ever heard of Terraria?\\"","color":"dark_gray"}']},
+						HideFlags:63,
+						CustomModelData:12151,
+						Unbreakable:1b,
+						AttributeModifiers:[
+							{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:100000,Operation:0,UUID:[I;1604201338,163007620,-1945161430,2003163737],Slot:"mainhand"},
+							{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:100000,Operation:0,UUID:[I;-153690498,1976386501,-1551567143,403883382],Slot:"mainhand"}
+						]
+					}
+				},
+
+				{
+					Slot:1,
+					id:splash_potion,
+					Count:1,
+					tag:{
+						display:{
+							Name:
+								'{"text":"Creative Killer","color":"light_purple","italic":false}',
+							Lore:[
+								'{"text":"AMB\'s Custom","color":"blue","italic":false}',
+								'{"text":"Kills GMC Players","color":"gray","italic":false}',
+							]
+						},
+						HideFlags:63,
+						CustomPotionColor:3158064,
+						CustomModelData:12153,
+						custom_potion_effects:[
+							{id:instant_health,amplifier:125}
+						]
+					}
+				},
+
+				{
+					Slot:2,
+					id:tropical_fish_spawn_egg,
+					Count:1,
+					tag:{
+						display:{
+							Name:
+								'{"text":"Tsar Bomba","color":"light_purple","italic":false}',
+							Lore:[
+								'{"text":"AMB\'s Custom","color":"blue","italic":false}',
+								'{"text":"Explosion Power: 127","color":"red","italic":false}',
+							]
+						},
+						CustomModelData:12154,
+						EntityTag:{
+							id:creeper,
+							Fuse:0,
+							ExplosionRadius:127,
+							ignited:1,
+							Silent:1b,
+							CustomName:'[{"text":"the soviets"}]'
+						}
+					}
+				},
+				
+				{
+					Slot:3,
+					id:potion,
+					Count:1,
+					tag:{
+						display:{
+							Name:
+								'{"text":"Invisibility Potion +","color":"light_purple","italic":false}',
+							Lore:[
+								'{"text":"AMB\'s Custom","color":"blue","italic":false}',
+								'{"text":"Invisibility (∞)","color":"blue","italic":false}',
+								'{"text":"Effect has no particles","color":"gray","italic":false}',
+							]
+						},
+						HideFlags:63,
+						CustomModelData:12155,
+						CustomPotionColor:6577456,
+						custom_potion_effects:[
+							{id:invisibility,duration:-1,show_particles:0b,show_icon:1b}
+						]
+					}
+				}
+			]
+		}
+	} 
+1
