@@ -1,10 +1,11 @@
 /give @p 
-	purple_shulker_box{
+	black_shulker_box{
 		display:{
 			Name:
-				'{"text":"Quasar Toolkit","color":"light_purple","italic":false}',
+				'{"text":"Quasar Toolkit","italic":false}',
 			Lore:[
-				'{"text":"A project by Anythingbuilder with some concepts from others","color":"purple","italic":false}',
+				'{"text":"A project by Anythingbuilder with","color":"blue","italic":false}',
+				'{"text":"some concepts from others","color":"blue","italic":false}',
 				'{"text":"Everything you need in one kit.","color":"dark_blue","italic":false}',
 				'{"text":"This label will dissapear when the kit is first","color":"dark_gray","italic":true}',
 				'{"text":"opened, which shows this copy is untouched.","color":"dark_gray","italic":true}',
