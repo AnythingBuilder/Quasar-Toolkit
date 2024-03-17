@@ -4,9 +4,9 @@
 			Name:
 				'{"text":"Quasar Toolkit","italic":false}',
 			Lore:[
-				'{"text":"A project by Anythingbuilder with","color":"blue","italic":false}',
+				'{"text":"A project by Anythingbuilder","color":"blue","italic":false}',
 				'{"text":"some concepts from others","color":"blue","italic":false}',
-				'{"text":"Everything you need in one kit.","color":"dark_blue","italic":false}',
+				'{"text":"github.com/AnythingBuilder/Quasar-Toolkit","color":"dark_blue","italic":false}',
 				'{"text":"This label will dissapear when the kit is first","color":"dark_gray","italic":true}',
 				'{"text":"opened, which shows this copy is untouched.","color":"dark_gray","italic":true}',
 			]
