@@ -1,0 +1,9 @@
+/give @p 
+  ghast_spawn_egg{
+    display:{
+      Name:
+        '{"text":"ForceOP Exploit","italic":false}'},
+      EntityTag:{
+        id:spawner_minecart
+      }
+  }
