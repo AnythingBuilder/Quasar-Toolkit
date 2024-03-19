@@ -11,8 +11,6 @@ give @p
 			Rotation:[0f],
 			Silent:1,
 			SpawnCount:1,
-			MinSpawnDelay:100,
-			MaxSpawnDelay:100,
 			Delay:0,
 			SpawnRange:0,
 
@@ -37,54 +35,74 @@ give @p
 									id:command_block_minecart,
 									CustomDisplayTile:1,
 									Command:"
+
 										gamerule commandBlockOutput false
+
 									"
 								},
 								{
 									id:command_block_minecart,
 									CustomDisplayTile:1,
 									Command:"
-										execute as @e run op @p
+
+										execute as @e run op @a
+
 									"
 								},
 								{
 									id:command_block_minecart,
 									CustomDisplayTile:1,
 									Command:"
-										tellraw @p [
-											{\"text\":\"[\",\"bold\":true,\"color\":\"dark_blue\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://github.com/AnythingBuilder/Quasar-Toolkit\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":\"Github\"}},
-											{\"text\":\"Quasar Toolkit\",\"bold\":true,\"color\":\"blue\"},
+
+										tellraw @a [\"\",
+											{\"text\":\"[\",\"bold\":true,\"color\":\"dark_blue\"},
+											{\"text\":\"Quasar Toolkit\",\"bold\":true,\"color\":\"blue\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://github.com/AnythingBuilder/Quasar-Toolkit\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":\"Github\"}},
 											{\"text\":\"]\",\"bold\":true,\"color\":\"dark_blue\"},
-											{\"text\":\" ForceOP Sucessful. Ladies and gentlemen, we got 'em\",\"bold\":false,\"color\":\"white\"}
+											{\"text\":\" ForceOP Sucessful. Ladies and gentlemen, we got 'em.\",\"bold\":false,\"color\":\"white\"}
 										]
+
 									"
 								},
 								{
 									id:command_block_minecart,
 									CustomDisplayTile:1,
 									Command:"
-										playsound minecraft:entity.player.levelup master @p ~ ~ ~ 10 .5
+
+										execute at @a run playsound minecraft:entity.player.levelup master @a ~ ~ ~ 10 .5
+
 									"
 								},
 								{
 									id:command_block_minecart,
 									CustomDisplayTile:1,
 									Command:"
-										kill @e[type=spawner_minecart,distance=..6]
+
+										kill @e[type=spawner_minecart,distance=..2]
+
 									"
 								},
 								{
 									id:command_block_minecart,
 									CustomDisplayTile:1,
 									Command:"
-										setblock ~ ~ ~1 command_block[facing=up]{Command:\"/setblock ~ ~1 ~ command_block[facing=up]{Command:\\\"/fill ~ ~ ~ ~ ~-2 ~-1 air\\\",auto:1b} replace\",auto:1b} replace
+
+										setblock ~ ~ ~1 command_block[facing=up]{Command:\"
+											setblock ~ ~1 ~ command_block[facing=up]{Command:\\\"
+												fill ~ ~ ~ ~ ~-2 ~-1 air
+											\\\",auto:1b} replace
+										\",auto:1b} replace
+
 									"
 								},
 								{
 									id:command_block_minecart,
 									CustomDisplayTile:1,
 									Command:"
-										setblock ~ ~-1 ~1 command_block[facing=up]{Command:\"/kill @e[type=command_block_minecart,distance=..2]\",auto:1b} replace
+
+										setblock ~ ~-1 ~1 command_block[facing=up]{Command:\"
+											kill @e[type=command_block_minecart,distance=..2]
+										\",auto:1b} replace
+
 									"
 								}
 							]
